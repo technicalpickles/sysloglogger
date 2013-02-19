@@ -9,7 +9,7 @@ drop-in with a few caveats.
 
 == About
 
-See SyslogLogger
+See Syslog::Logger
 
 == Install
 
