@@ -41,7 +41,7 @@ class Syslog::Logger
   ##
   # The version of Syslog::Logger you are using.
 
-  VERSION = '2.0'
+  VERSION = '2.0' unless const_defined?(:VERSION)
 
   ##
   # Maps Logger warning types to syslog(3) warning types.
@@ -58,7 +58,7 @@ class Syslog::Logger
     ::Logger::WARN    => Syslog::LOG_NOTICE,
     ::Logger::INFO    => Syslog::LOG_INFO,
     ::Logger::DEBUG   => Syslog::LOG_DEBUG,
-  }
+  } unless const_defined?(:LEVEL_MAP)
 
   ##
   # Returns the internal Syslog object that is initialized when the
